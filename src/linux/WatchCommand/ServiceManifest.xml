@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceManifest Name="WatchCommand" Version="1.0.0" xmlns="http://schemas.microsoft.com/2011/01/fabric" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ManifestId="59b4fb77-0363-4e05-bc73-96758498dbe9">
+  <ServiceTypes>
+    <StatelessServiceType ServiceTypeName="WatchCommandSvcType" UseImplicitHost="true" />
+  </ServiceTypes>
+  <CodePackage Name="Code" Version="1.0.0">
+    <EntryPoint>
+      <ExeHost>
+        <Program>mainEntryPoint.sh</Program>
+      </ExeHost>
+    </EntryPoint>
+    <EnvironmentVariables>
+      <EnvironmentVariable Name="CommandToRun" Value=""/>
+      <EnvironmentVariable Name="SleepInterval" Value=""/>
+    </EnvironmentVariables>
+  </CodePackage>
+</ServiceManifest>
